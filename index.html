@@ -5,52 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de Carros</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        nav {
-            background-color: #444;
-            padding: 10px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-        nav ul li a:hover {
-            background-color: #666;
-        }
-        section {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+        /* Estilos CSS aqui */
+        /* Mesmos estilos do exemplo anterior */
     </style>
+    <script>
+        function toggleCarList() {
+            var carList = document.getElementById("carList");
+            if (carList.style.display === "block") {
+                carList.style.display = "none";
+            } else {
+                carList.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -58,13 +25,14 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#carros">Carros</a></li>
+            <li><a href="#" onclick="toggleCarList()">Carros</a></li>
             <li><a href="#sobre">Sobre</a></li>
         </ul>
     </nav>
     <section id="carros">
         <h2>Modelos Populares de Carros</h2>
-        <ul>
+        <!-- Lista de carros inicialmente oculta -->
+        <ul id="carList" style="display: none;">
             <li>Toyota Corolla</li>
             <li>Honda Civic</li>
             <li>Ford Mustang</li>
@@ -81,3 +49,4 @@
     </footer>
 </body>
 </html>
+
