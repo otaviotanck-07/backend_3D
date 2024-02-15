@@ -1,72 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Carros</title>
-    <style>
-        /* Estilos CSS aqui */
-        /* Mesmos estilos do exemplo anterior */
-        .car-image {
-            display: none;
-            max-width: 100%;
-            height: auto;
-            margin-top: 10px;
-        }
-    </style>
-    <script>
-        function toggleCarImage(carId) {
-            var carImage = document.getElementById(carId + "-image");
-            if (carImage.style.display === "block") {
-                carImage.style.display = "none";
-            } else {
-                carImage.style.display = "block";
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venda de Carros</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Site de Carros</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#" onclick="toggleCarList()">Carros</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-        </ul>
-    </nav>
-    <section id="carros">
-        <h2>Modelos Populares de Carros</h2>
-        <!-- Lista de carros inicialmente oculta -->
-        <ul id="carList" style="display: none;">
-            <li>
-                <a href="#" onclick="toggleCarImage('toyota-corolla')">Toyota Corolla</a>
-                <img class="car-image" id="toyota-corolla-image" src="toyota_corolla.jpg" alt="Toyota Corolla">
-            </li>
-            <li>
-                <a href="#" onclick="toggleCarImage('honda-civic')">Honda Civic</a>
-                <img class="car-image" id="honda-civic-image" src="honda_civic.jpg" alt="Honda Civic">
-            </li>
-            <li>
-                <a href="#" onclick="toggleCarImage('ford-mustang')">Ford Mustang</a>
-                <img class="car-image" id="ford-mustang-image" src="ford_mustang.jpg" alt="Ford Mustang">
-            </li>
-            <li>
-                <a href="#" onclick="toggleCarImage('chevrolet-camaro')">Chevrolet Camaro</a>
-                <img class="car-image" id="chevrolet-camaro-image" src="chevrolet_camaro.jpg" alt="Chevrolet Camaro">
-            </li>
-            <li>
-                <a href="#" onclick="toggleCarImage('volkswagen-golf')">Volkswagen Golf</a>
-                <img class="car-image" id="volkswagen-golf-image" src="volkswagen_golf.jpg" alt="Volkswagen Golf">
-            </li>
-        </ul>
-    </section>
-    <section id="sobre">
-        <h2>Sobre Este Site</h2>
-        <p>Este site foi criado para fornecer informações básicas sobre alguns modelos populares de carros.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Site de Carros</p>
-    </footer>
+  <header>
+    <h1>Venda de Carros</h1>
+  </header>
+  
+  <main>
+    <h2>Carros Disponíveis</h2>
+    <ul id="car-list">
+      <!-- Car list will be populated dynamically using JavaScript -->
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Venda de Carros Inc.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
